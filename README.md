@@ -79,3 +79,5 @@
   _Make sure all extensions have loaded_
 
 This is my practice repository for learning Git!
+## Edited on GitHub
+I made this change directly on the GitHub website!
