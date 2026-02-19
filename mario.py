@@ -3,7 +3,7 @@ def main():
 
 
 def print_square(size):
-    for i in range(size):
+    for _ in range(size):
         print("#" * size)
 
 
