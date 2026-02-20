@@ -1,11 +1,14 @@
-user_input = input("Enter a coin: ")
-amount_due = 50 - int(user_input)
+amount_due = 50
 
-while 0 < amount_due <= 50:
-    if user_input != 25 or user_input != 10 or user_input != 5:
-        input("Error, invalid amount: Retry ")
-    elif user_input == 25 or user_input == 10 or user_input == 5:
-        input("Amount due: " + str(amount_due), "\n")
+while 0 < amount_due:
+    user_input = int(input("Enter a coin: "))
 
-while 0 >= amount_due:
-    print("Change owed: " + str(amount_due))
+    if user_input in [5, 10, 25]:
+        amount_due = amount_due - user_input
+        print("Amount due: " + str(amount_due))
+
+    if user_input not in [5, 10, 25]:
+        print("Error, only input 25, 10 or 5. Retry: ")
+
+if 0 >= amount_due:
+    print(f"Change owed: {abs(amount_due)}")
