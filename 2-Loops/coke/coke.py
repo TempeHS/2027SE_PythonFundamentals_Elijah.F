@@ -8,7 +8,7 @@ while 0 < amount_due:
         print("Amount due: " + str(amount_due))
 
     if user_input not in [5, 10, 25]:
-        print("Error, only input 25, 10 or 5. Retry: ")
+        print("Amount due: " + str(amount_due))
 
 if 0 >= amount_due:
     print(f"Change owed: {abs(amount_due)}")
