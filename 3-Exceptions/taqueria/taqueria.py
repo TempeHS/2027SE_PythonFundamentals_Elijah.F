@@ -20,4 +20,3 @@ while True:
         break
     except KeyError:
         print("Invalid item, retry: ")
-        break
