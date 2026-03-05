@@ -1,28 +1,32 @@
 months = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December"
-	]
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
 
-user_input = input("Enter a date: ").replace("/", "").replace(",", "")
-if user_input.split(" ")[0] in months:
-
-
-
-try:
-    if "/" in user_input:
-        user_input.split("/")
-    print(user_input[2] and user_input[0] and user_input[1] sep="-")
-    
-
-
-
+while True:
+    try:
+        user_input = input("Enter a date: ")
+        if "/" in user_input:
+            parts = user_input.split("/")
+            month = int(parts[0])
+            day = int(parts[1])
+            year = int(parts[2])
+            if day <= 31 and month <= 12:
+                print(f"{year}-{month:02}-{day:02}")
+                break
+            else:
+                raise ValueError
+    except ValueError:
+        print("Invalid date, retry: ")
+	try:
+        
