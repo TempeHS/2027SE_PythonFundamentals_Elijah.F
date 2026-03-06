@@ -24,9 +24,19 @@ while True:
             if day <= 31 and month <= 12:
                 print(f"{year}-{month:02}-{day:02}")
                 break
+
             else:
                 raise ValueError
+        elif "," in user_input:
+            parts_2 = user_input.replace(",", "").split()
+            month_2 = parts_2[0]
+            month_2_int = months.index(month_2) + 1
+            day_2 = int(parts_2[1])
+            year_2 = int(parts_2[2])
+            if day_2 <= 31 and month_2_int <= 12:
+                print(f"{year_2}-{month_2_int:02}-{day_2:02}")
+                break
+        else:
+            raise ValueError
     except ValueError:
         print("Invalid date, retry: ")
-	try:
-        
