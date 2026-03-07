@@ -1,7 +1,7 @@
 import random
 
 user_level = int(input("Level: "))
-correct_number = random.randrange(1, int(user_level))
+correct_number = random.randint(1, user_level)
 
 while True:
     try:
