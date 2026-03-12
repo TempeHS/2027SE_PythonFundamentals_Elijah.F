@@ -1,15 +1,19 @@
 import random
 
-user_level = int(input("Level: "))
-correct_number = random.randint(1, user_level)
 
 while True:
     try:
+        user_level = int(input("Level: "))
         if user_level < 1:
             raise ValueError
+        else:
+            break
     except (ValueError, TypeError):
-        print("Level: ")
+        continue
 
+correct_number = random.randint(1, user_level)
+
+while True:
     try:
         user_guess = int(input("Guess: "))
         if user_guess < 1:
@@ -22,4 +26,4 @@ while True:
             print("Just right!")
             break
     except ValueError:
-        print("Invalid guess, retry: ")
+        continue
