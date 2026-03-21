@@ -12,7 +12,7 @@ def main():
 
         while attempts < 3:
             try:
-                equation = int(input(f"{x} + {y}"))
+                equation = int(input(f"{x} + {y} = "))
                 if equation != x + y:
                     print("EEE")
                     attempts = attempts + 1
@@ -20,7 +20,11 @@ def main():
                     score = score + 1
                     break
             except ValueError:
+                print("EEE")
+                attempts = attempts + 1
                 continue
+
+    print(f"Score: {score}")
 
 
 def generate_number(level):
