@@ -18,7 +18,6 @@ try:
         rows = []
         for row in reader:
             rows.append(row.values())
-            pass
         print(tabulate(rows, headers=reader.fieldnames, tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File not found")

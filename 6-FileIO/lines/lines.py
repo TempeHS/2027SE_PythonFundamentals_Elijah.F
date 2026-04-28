@@ -14,7 +14,7 @@ except IndexError:
 try:
     with open(sys.argv[1], "r") as file:
         for line in file:
-            if line.lstrip(" ").startswith("#") is True:
+            if line.lstrip().startswith("#") is True:
                 continue
             if line.strip() == "":
                 continue
